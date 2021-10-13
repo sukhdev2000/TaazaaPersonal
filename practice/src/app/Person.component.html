@@ -1,0 +1,33 @@
+<button (click)="PersonDetails()">PersonDetails</button>
+
+<div *ngIf="personObject">
+    Person ID:{{personObject.id}}
+    Person NAME:{{personObject.name}}
+</div>
+<!-- Here we are doing Binding by interpolation technique which can bind class level object  in UI -->
+
+<!-- Person ID:{{personObject.id}}
+Person NAME:{{personObject.name}}
+ -->
+
+<h1>PersonDetails</h1>
+<button (click)="PersonDetailsList()">PersonInfo</button>
+
+<table>
+    <head>
+        <tr>
+            <th>ID: </th>
+            <th>NAME: </th>
+        </tr>
+    </head>
+    <body>
+        <tr *ngFor="let temp of personList">
+            <td>
+                {{temp.id}}
+            </td>
+            <td>
+                {{temp.name}}
+            </td>
+        </tr>
+    </body>
+</table>

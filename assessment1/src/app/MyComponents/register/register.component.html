@@ -1,0 +1,31 @@
+<h1 style="text-align: center;background-color:cornflowerblue;">Registration Page</h1>
+
+<br>
+<form #UserForm="ngForm" (ngSubmit)="RegisterData(UserForm.value)" style="text-align: center;">
+    <div>
+        <label style="text-align:left" >
+            UserName
+        </label>
+        <input type="text" name="Username">
+    </div>
+    <br>
+    <div>
+        <label style="text-align:left">
+            Email
+        </label>
+        <input type="text" name="email" ngModel>
+    </div>
+    <br>
+    <div>
+        <label style="text-align:left">
+            Password
+        </label>
+        <input type="password" name="password" ngmodel>
+    </div>
+    <br>
+    <div>
+        <input type="submit" value="Register">
+       
+        <input type="reset" value="Reset">
+    </div>
+</form>

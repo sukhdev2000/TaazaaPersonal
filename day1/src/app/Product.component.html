@@ -1,0 +1,29 @@
+<button (click)="productsDetails()">Fetch Details</button>
+<style>
+    table,
+    th,
+    td {
+        padding: 5px;
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+</style>
+
+<body>
+    <h1> Product Details</h1>
+
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+        <tr *ngFor="let temp1 of temp">
+            <!--  <td><a [routerLink]="['/Product', prod.productId]">{{prod.productId}}</a></td> -->
+            <td><a [routerLink]="['Product',temp1.productID]">{{temp1.productID}}</a></td>
+            <!--  <td>{{temp1.productID}}</td> -->
+            <td>{{temp1.Name}}</td>
+            <td>{{temp1.Price}}</td>
+        </tr>
+    </table>
+</body>

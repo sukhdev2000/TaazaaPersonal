@@ -1,0 +1,31 @@
+<!-- <h1>Under Construction in Login Page</h1>
+<form #UserLogin="ngForm" (ngSubmit)="Login(UserLogin.value)">
+    <label>Username</label>
+    <input type="text" name="Username" ngModel>
+    <label>UserPassword</label>
+    <input type="password" name="UserPassword" ngModel> 
+    <input type="submit" value="Login">
+</form> -->
+<form [formGroup]="formGroup" (ngSubmit)="Login(formGroup.value)">
+    <div>
+        <label>
+            UserName
+        </label>
+        <input type="text" formControlName="UserName">
+    </div>
+    <div>
+        <label>
+            Password
+        </label>
+        <input type="password" formControlName="Password">
+    </div>
+    <div>
+        <label>
+            Age
+        </label>
+        <input type="text" formControlName="Age">
+    </div>
+    <div>
+        <input type="submit" value="Login" >
+    </div>
+</form>

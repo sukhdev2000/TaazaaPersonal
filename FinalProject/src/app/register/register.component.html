@@ -1,0 +1,86 @@
+<h1>Under Construction in Register Page</h1>
+<h1>Welcome To The Register Page</h1>
+
+<form #UserForm="ngForm" (ngSubmit)="RegisterData(UserForm.value)">
+    <div>
+        <label>UserName</label>
+        <input type="text" name="txtUserName" ngModel>
+    </div><br>
+
+    <div>
+        <label>Password</label>
+        <input type="password" name="txtPassword" ngModel>
+    </div><br>
+
+    <div>
+        <label>Age</label>
+        <input type="number" name="txtAge" ngModel>
+    </div><br>
+
+    <div>
+        <label>Email:</label>
+        <input type="email" name="txtEmail" ngModel>
+    </div>
+
+    <div><label>
+            <h5>Gender:</h5>
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="gender" value="Male" ngModel>
+            Male
+        </label>
+
+        <label class="radio-inline">
+            <input type="radio" name="gender" value="Female" ngModel>
+            Female
+        </label>
+    </div><br>
+
+
+
+    <!-- </div>
+    <label class="checkbox-inline">
+      <input type="checkbox" value="" name="hiking" ngModel> Hiking
+    </label>
+    <label class="checkbox-inline">
+      <input type="checkbox" value="swimming" name="swimming" ngModel> Swimming
+    </label>
+    <label class="checkbox-inline">
+      <input type="checkbox" value="running" name="running" ngModel> Running
+    </label> -->
+
+    <!-- div>
+        <label>
+            <h5>Nationality</h5>
+        </label>
+        <select name="nation" ngModel>
+            <option selected>--enter nationality---</option>
+            <option>Indian</option>
+            <option>American</option>
+            <option>Canadian</option>
+        </select>
+    </div> -->
+
+    <div> Nationality :
+        <select name="Nation" ngModel >
+            <option selected>--enter nationality---</option>
+          <option *ngFor="let i of Nationality">{{i}} </option>
+        </select>
+      </div>
+    
+
+    <div>
+        <label>
+            <h5>DOB</h5>
+        </label>
+        <input type="date" name="TxtDateOfBirth" ngModel>
+    </div>
+    <br>
+
+    <div>
+        <input type="submit" value="Register">
+        <input type="reset" value="Reset">
+    </div>
+
+
+</form>

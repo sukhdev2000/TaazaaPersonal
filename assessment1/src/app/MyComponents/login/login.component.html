@@ -1,0 +1,21 @@
+
+<h1 style="text-align: center; background-color: cornflowerblue;" >Login Page</h1>
+<form style="text-align: center;" [formGroup]="formGroup" (ngSubmit)="LoginData(formGroup.value)">
+    <div>
+        <label>
+            UserName
+        </label>
+        <input type="text" formControlName="UserName">
+    </div>
+    <br>
+    <div>
+        <label>
+            Password
+        </label>
+        <input type="password" formControlName="Password">
+    </div>
+    <br>
+    <div>
+        <input type="submit" value="Login" >
+    </div>
+</form>
